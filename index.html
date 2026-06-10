@@ -6,102 +6,133 @@
 <title>Portafolio de Evidencias</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:"Segoe UI", Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:url("bg.gif") center center / cover no-repeat fixed;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #662200 0%,
+        #220000 35%,
+        #000000 100%
+    );
+
     min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
     padding:40px;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    repeating-linear-gradient(
+        0deg,
+        rgba(255,60,0,.02) 0px,
+        rgba(255,60,0,.02) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+
+    pointer-events:none;
 }
 
 .contenedor{
-    width:90%;
+
+    width:95%;
     max-width:1000px;
-    background:rgba(17,17,17,0.88);
-    backdrop-filter:blur(4px);
-    padding:50px;
-    border-radius:12px;
-    border:1px solid #333;
-    box-shadow:0 4px 12px rgba(255,255,255,0.05);
+    margin:auto;
+    background:rgba(17,17,17,.92);
+    border:4px solid #555;
+    padding:40px;
+    box-shadow:
+        0 0 30px rgba(255,0,0,.4),
+        inset 0 0 25px rgba(255,120,0,.15);
 }
 
 h1{
+
     text-align:center;
-    color:#fff;
-    font-size:2.3rem;
+    color:#ff6600;
+    font-size:3rem;
     margin-bottom:15px;
-    font-weight:700;
+    text-shadow:
+        0 0 10px red,
+        0 0 20px orange;
 }
 
 h2{
+
     text-align:center;
-    color:#d9d9d9;
+    color:#ddd;
     margin-bottom:20px;
-    font-weight:500;
 }
 
 p{
+
     text-align:center;
-    color:#bfbfbf;
+    color:#bbb;
     margin-bottom:35px;
-    line-height:1.7;
+    line-height:1.8;
 }
 
 ol{
+
     list-style:none;
 }
 
 li{
+
     margin-bottom:12px;
 }
 
 a{
+
     display:block;
     text-decoration:none;
     color:#fff;
     background:#1a1a1a;
-    border:1px solid #333;
-    border-radius:8px;
+    border:2px solid #444;
     padding:16px 20px;
-    font-weight:500;
-    transition:all .25s ease;
+    transition:.25s;
+    font-weight:bold;
 }
 
 a:hover{
-    background:#262626;
-    border-color:#555;
-    transform:translateX(5px);
+
+    background:#2a0000;
+    border-color:#ff3300;
+    box-shadow:
+        0 0 15px rgba(255,0,0,.5);
+    transform:translateX(6px);
 }
 
 .proyecto{
-    background:#fff;
-    color:#000;
-    border:1px solid #fff;
-}
 
+    background:#550000;
+    border-color:#ff3300;
+}
 .proyecto:hover{
-    background:#e6e6e6;
-    color:#000;
+    
+    background:#770000;
 }
-
 @media(max-width:768px){
 
     .contenedor{
-        padding:30px;
+        
+        padding:25px;
     }
-
     h1{
-        font-size:1.8rem;
+        font-size:2rem;
     }
-
 }
 </style>
 
